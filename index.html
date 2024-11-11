@@ -7,26 +7,53 @@
     <link rel="stylesheet"  href="styleIndex.css">
 </head>
 <body>
+
+    <!-- Barra lateral oculta -->
+    <div id="sidebar" class="sidebar">
+        <span class="close-btn" onclick="closeSidebar()">&times;</span>
+        <a href="#">Home</a>
+        <a href="#">Campanhas e Ofertas</a>
+        <a href="#">Configurador</a>
+        <a href="#">Produtos</a>
+        <a href="#">PC Gaming</a>
+        <a href="#">Lojas Perto de Si</a>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="main-content">
+        <h1>Bem-vindo!</h1>
+        <p>Este é um exemplo de uma barra lateral oculta que aparece ao clicar no botão "Menu".</p>
+    </div>
+
+    <script>
+        /* Função para abrir a barra lateral */
+        function openSidebar() {
+            document.getElementById("sidebar").style.width = "250px";
+        }
+
+        /* Função para fechar a barra lateral */
+        function closeSidebar() {
+            document.getElementById("sidebar").style.width = "0";
+        }
+    </script>
+
+
+
     <div class="navbar">
-        <!-- Logo -->
         <div class="logo">
-            PCDIG@
+            PcChip9
         </div>
-        
-        <!-- Menu de navegação -->
-        <div class="menu">
-            <a href="#">Campanhas e Ofertas</a>
-            <a href="#">Configurador</a>
-            <a href="#">Produtos</a>
-            <a href="#">PC Gaming</a>
-            <a href="#">Lojas Chip7</a>
-        </div>
-        
-        <!-- Caixa de pesquisa -->
+
         <div class="search-container">
             <input type="text" placeholder="Escreve aqui o que procuras...">
         </div>
+        
+        <!-- Botão para abrir a barra lateral -->
+        <button class="open-btn" onclick="openSidebar()">☰ Menu</button>
+
     </div>
+
+    
     <footer>
 
     </footer>

@@ -1,88 +1,149 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        /* Reset básico */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
+/* Estilo da barra lateral */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: width 0.3s ease;
+    padding-top: 60px;
+    color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
 
-        /* Navbar */
-        .navbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: linear-gradient(90deg, #333, #444);
-            padding: 15px 20px;
-            color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+/* Links da barra lateral */
+.sidebar a {
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #f4f4f4;
+    display: block;
+    transition: background 0.3s ease;
+}
 
-        /* Logo */
-        .navbar .logo {
-            display: flex;
-            align-items: center;
-            font-size: 1.8em;
-            font-weight: bold;
-            color: #f97300;
-        }
+.sidebar a:hover {
+    background-color: #575757;
+}
 
-        /* Menu de navegação */
-        .navbar .menu {
-            display: flex;
-            gap: 20px;
-        }
+/* Botão para fechar a barra */
+.sidebar .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 2em;
+    cursor: pointer;
+    color: #ffcc00;
+}
 
-        .navbar .menu a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
+/* Botão para abrir a barra lateral */
+.open-btn {
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 10px 15px;
+    color: #333;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    margin: 20px;
+    transition: background 0.3s ease;
+}
 
-        .navbar .menu a:hover {
-            color: #ffcc00;
-        }
+.open-btn:hover {
+    background-color: #f7b600;
+}
 
-        /* Caixa de pesquisa */
-        .navbar .search-container {
-            display: flex;
-            align-items: center;
-            background-color: #555;
-            border-radius: 20px;
-            padding: 5px 15px;
-            width: 300px;
-        }
+/* Conteúdo principal */
+.main-content {
+    margin-left: 20px;
+    padding: 20px;
+}
 
-        .navbar .search-container input[type="text"] {
-            width: 100%;
-            background: none;
-            border: none;
-            color: white;
-            padding: 5px;
-            font-size: 1em;
-            outline: none;
-        }
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #333, #444);
+    padding: 15px 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-        .navbar .search-container input::placeholder {
-            color: #ccc;
-        }
+/* Logo */
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #f97300;
+}
 
-        /* Botão de destaque */
-        .highlight-button {
-            background-color: #ffcc00;
-            color: #333;
-            padding: 10px 15px;
-            border-radius: 20px;
-            font-weight: bold;
-            text-decoration: none;
-            transition: background 0.3s ease;
-        }
+/* Menu de navegação */
+.navbar .menu {
+    display: flex;
+    gap: 20px;
+}
 
-        .highlight-button:hover {
-            background-color: #f7b600;
-        }
+.navbar .menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu a:hover {
+    color: #ffcc00;
+}
+
+/* Caixa de pesquisa */
+.navbar .search-container {
+    display: flex;
+    align-items: center;
+    background-color: #555;
+    border-radius: 20px;
+    padding: 5px 15px;
+    width: 300px;
+}
+
+.navbar .search-container input[type="text"] {
+    width: 100%;
+    background: none;
+    border: none;
+    color: white;
+    padding: 5px;
+    font-size: 1em;
+    outline: none;
+}
+
+.navbar .search-container input::placeholder {
+    color: #ccc;
+}
+
+/* Botão de destaque */
+.highlight-button {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.highlight-button:hover {
+    background-color: #f7b600;
+}
