@@ -18,6 +18,6 @@ function data_horaF(){
     dateTimeElement.textContent = formattedDateTime;
 }
 
-setInterval(updateDateTime, 1000);
+setInterval(data_horaF, 1000);
 
-updateDateTime();
+data_horaF();
