@@ -1,4 +1,4 @@
-function data_hora(){
+function data_horaF(){
     const dateTimeElement = document.getElementById('data_hora');
     const now = new Date();
 
