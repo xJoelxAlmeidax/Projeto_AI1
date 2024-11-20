@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: Lexend;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+}
+.home{
+    height: 60px;
+    align-items: center;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+}
+.home h1{
+    color: white;
+    font-size: 2.986rem;
+    transition: all 0.3s ease;
+}
+.home h5{
+    color: white;
+    font-size: 1.44rem;
+    align-self:flex-end;
+    transition: all 0.3s ease;
+}
+
+.home img{
+    width: 155px;
+    margin-top: 10px;
+}
+
+.home .hidden {
+    opacity: 0; /* Inicia escondido */
+    transform: translateX(-20px); /* Move ligeiramente para cima */
+    transition: opacity 0.4s ease, transform 0.4s ease; /* Anima a opacidade e a posição */
+}
+
+header a.home{
+    display: flex;
+    text-decoration: none;
+    padding: 5px;
+}
+
+nav{
+    position: relative;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+}
+
+
+.menu {
+    display: flex;
+    justify-content: right;
+    position: relative;
+    gap: 20px;
+    padding: 20px;
+    list-style: none;
+}
+
+.menu li{
+    display: flex;
+    gap: 10px;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+
+.menu > li {
+    position: relative; /* Necessário para o posicionamento dos submenus */
+    bottom: 50%;
+    right: 2px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.menu h3 {
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Submenu oculto inicialmente */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Alinha o submenu logo abaixo do item principal */
+    left: -30px;
+    background-color: #333333;
+    padding: 10px 0;
+    list-style: none;
+    border-radius: 8px;
+    min-width: 200px;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+.submenu li {
+    justify-content: center;
+    padding: 8px 15px;
+}
+
+.submenu li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Submenu visível ao passar o rato */
+.menu > li:hover .submenu {
+    display: block;
+}
+
+/* Animação suave para o submenu */
+.submenu {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menu > li:hover .submenu {
+    opacity: 1;
+    transform: translateY(0);
+}
+li:hover{
+    font-weight: bolder;
+    background-color: #505050;
+}
+
+main{
+    background-color: rgb(194, 194, 194);
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100% - 75px); /* Preenchendo o espaço restante */
+    padding: 10px;
+    margin: 10px;
+    border-radius: 16px;
+    transition: margin-left 0.3s;
+    position: relative;
+}
+
+#data_hora {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-top-left-radius: 20px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle{
+    display: none;
+    color: white;
+    background:none;
+    border: none;
+    position: absolute;
+    right:40px;
+    top: 30px;
+    font-size: 30px;
+    transform: translateY(-40%);
+    cursor: pointer;
+}
+
+.menu.side{
+    display: flex;
+    flex-direction: column;
+}
+.sidebar {
+    border-top-left-radius: 18px;
+    position: fixed;
+    right: -80%;
+    top: 0;
+    width: 60%;
+    height: 100%;
+    background-color: #282828;
+    color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 999;
+    overflow: scroll;
+}
+.sidebar li{
+    width: 100%;
+    justify-content: center;
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+.sidebar .button-close {
+    font-size: 30px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    text-align: left;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.sidebar .button-close:hover{
+    border-bottom-right-radius: 18px;
+    background-color: #505050;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 998; 
+    display: none;
+}
+.final{
+    height: 30px;
+    width: 110%;
+    position: inherit;
+    margin: -10px;
+    margin-top: 10px;
+    border-radius: 18px;
+    background-color: #c2c2c2;
+}
+
+footer{
+    padding-left: 30px;
+    min-height: 15vh;
+    height:fit-content;
+    width: 110%;
+    margin: -18px;
+    padding-top: 30px;
+    background-color: #333333;
+    z-index: -1;
+}
+footer h3{
+    color: white;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    background-color: #505050;
+    border-radius: 8px;
+}
+footer a:hover{
+    background-color: #636363;
+
+}
+.links{
+    gap: 15px;
+}
+
+@media (max-width: 900px){
+    header h1{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    #data_hora{
+        font-size: 0.8em;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    nav {
+        display: none; 
+    }
+    header h1{
+        display: block;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    #data_hora{
+        font-size: 0.6em;
+    }
+    header h1{
+        display: none;
+    }
+   
+
+}

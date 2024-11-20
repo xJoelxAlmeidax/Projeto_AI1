@@ -3,23 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css"/>
+    <link rel="stylesheet" href="CSS/style_index.css">
+    <link rel="stylesheet" href="CSS/geral.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="IMG/icon.gif">
 
     <title></title>
 </head>
 <body>
     <header>
-        <a href="" class="home"><i class="iconoir-compact-disc"></i><h1>SONG</h1></a>
+        <a href="" class="home">
+            <img src="IMG/logo.svg" alt="Logo">
+            <h1 class="h hidden">PRO</h1>
+            <h5 class="h hidden">Music</h5>
+        </a>
+        <!--NAVBAR NORMAL-->
         <nav>
-            <img src="" alt="">
-            <ul>
-                <li><i class="iconoir-album-list"></i><a href="">&emsp;<a href="">Artistas</a></li>
-                <li><i class="iconoir-headset"></i><a href="">&emsp;<a href="">Músicas</a></li>
-                <li><i class="iconoir-text-square"></i><a href="">&emsp;<a href="">Enviar letras</a></li>
+            <ul class="menu">
+                <li>
+                    <a href="#"><h3><i class="fa-solid fa-microphone"></i>&emsp;Artistas</h3></a>
+                    <ul class="submenu">
+                        <li><a href="#">Taylor Swift</a></li>
+                        <li><a href="#">Noah Kahan</a></li>
+                        <li><a href="#">Phoebe Bridgers</a></li>
+                        <li><a href="#">Finneas O'Connell</a></li>
+                        <li><a href="#">Gracie Abrams</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><h3><i class="fa-solid fa-guitar"></i>&emsp;Músicas</h3></a>
+                    <ul class="submenu">
+                        <li><a href="#">Pop</a></li>
+                        <li><a href="#">Indie</a></li>
+                        <li><a href="#">Folk</a></li>
+                        <li><a href="#">Rock</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><h3><i class="fa-solid fa-envelope"></i>&emsp;Enviar letras</h3></a>
+                </li>
             </ul>
         </nav>
+        <!--NAVBAR SIDEBAR-->
+        <button class="menu-toggle" id="menuToggle" onclick="abrirSidebar()"><i class="fa-solid fa-bars"></i></button>
+        <div class="overlay" id="overlay" onclick="fecharSidebar()"></div>
+        <div class="sidebar" id="mySidebar">
+            <button class="button-close" onclick="fecharSidebar()"><i class="fa-solid fa-xmark"></i></button>
+            <ul class="menu side">
+                <li>
+                    <a href="#"><h3><i class="fa-solid fa-microphone"></i>&emsp;Artistas</h3></a>
+                        <li><a href="#">Taylor Swift</a></li>
+                        <li><a href="#">Noah Kahan</a></li>
+                        <li><a href="#">Phoebe Bridgers</a></li>
+                        <li><a href="#">Finneas O'Connell</a></li>
+                        <li><a href="#">Gracie Abrams</a></li>
+                </li>
+                <li>
+                    <a href="#"><h3><i class="fa-solid fa-guitar"></i>&emsp;Músicas</h3></a>
+                        <li><a href="#">Pop</a></li>
+                        <li><a href="#">Indie</a></li>
+                        <li><a href="#">Folk</a></li>
+                        <li><a href="#">Rock</a></li>
+                </li>
+                <li>
+                    <a href="#"><h3><i class="fa-solid fa-envelope"></i>&emsp;Enviar letras</h3></a>
+                </li>
+            </ul>
+        </div>
     </header>
     <main>
         <!------------------------------------SLIDER------------------------------------>
@@ -36,22 +86,22 @@
                     <input type="radio" name="radio-btn" id="radio6">
                     <!--Slides-->
                     <div class="slide um">
-                        <img src="IMG/TAYLORR.jpg" alt="Taylor Swift">
+                        <a href=""><img src="IMG/TAYLORR.jpg" alt="Taylor Swift"></a>
                     </div>
                     <div class="slide">
-                        <img src="IMG/noah.jpg" alt="Noah Kahan">
+                        <a href=""><img src="IMG/noah.jpg" alt="Noah Kahan"></a>
                     </div>
                     <div class="slide">
-                        <img src="IMG/phoebe.png" alt="Phoebe Bridgers">
+                        <a href=""><img src="IMG/phoebe.png" alt="Phoebe Bridgers"></a>
                     </div>
                     <div class="slide">
-                        <img src="IMG/finneas.jpg" alt="Finneas">
+                        <a href=""><img src="IMG/finneas.jpg" alt="Finneas"></a>
                     </div>
                     <div class="slide">
-                        <img src="IMG/Gracie.jpg" alt="Gracie">
+                        <a href=""><img src="IMG/Gracie.jpg" alt="Gracie"></a>
                     </div>
                     <div class="slide">
-                        <img src="IMG/TAYLORR.jpg" alt="Taylor Swift">
+                        <a href=""><img src="IMG/TAYLORR.jpg" alt="Taylor Swift"></a>
                     </div>
                     <!--Navegação automatica-->
                     <div class="navigation-auto">
@@ -199,7 +249,21 @@
 
         <!------------------------------------------------------------------------------------------------------------------------>
         <div id="data_hora"></div>
+        <div class="final"></div>
+        <footer>
+            <h3>Siga o <b>PRO</b><small>Music</small> :</h3>
+            <br>
+            <br>
+            <div class="links">
+                <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i>&emsp;Instagram</a>
+                <a href="https://www.tiktok.com/" target="_blank"><i class="fa-brands fa-tiktok"></i>&emsp;TikTok</a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i>&emsp;YouTube</a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i>&emsp;Facebook</a>
+                <a href="https://x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i>&emsp;X/twitter</a>
+            </div>
+        </footer>
     </main>
-    <script src="SCRIPT/script.js"></script>
+    <script src="SCRIPT/geral.js"></script>
+    <script src="SCRIPT/script_index.js"></script>
 </body>
 </html>

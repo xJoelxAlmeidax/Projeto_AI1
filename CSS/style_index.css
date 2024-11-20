@@ -1,0 +1,318 @@
+
+/*------------------------------------------------------------------SLIDER------------------------------------------------------------------------*/
+.div_slider{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.div_slider h1{
+    padding: 10px 15px;
+    width: fit-content;
+    position:absolute;
+    background-color: #333;
+    color: #ffffff;
+    border-top-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    z-index: 10;
+}
+
+.slider{
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides{
+    width: 100%;
+    height: 70vh; /* Altura do slider, ajuste conforme necessário */
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* Garante que as partes cortadas fiquem escondidas */
+    border-radius: 18px;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 100%;
+    transition: all 1s ease;
+    flex: 1 0 100%;
+    position: relative;
+}
+
+
+.slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.manual-navigation{
+    position: relative;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 20px;
+}
+
+.manual-btn:hover{
+    background-color: white;
+}
+
+#radio1:checked ~ .um{
+    margin-left: 500%;
+}
+
+#radio2:checked ~ .um{
+    margin-left: 300%;
+}
+
+#radio3:checked ~ .um{
+    margin-left: 100%;
+}
+
+#radio4:checked ~ .um{
+    margin-left: -100%;
+}
+
+#radio5:checked ~ .um{
+    margin-left: -300%;
+}
+#radio6:checked ~ .um{
+    margin-left: -500%;
+}
+
+
+.navigation-auto div{
+    border: 2px solid #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.navigation-auto{
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 20px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: white;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: white;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: white;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: white;
+}
+#radio5:checked ~ .navigation-auto .auto-btn5{
+    background-color: white;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------TOP-----------------------------------------------------------------*/
+.tops{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 10px;
+    gap: 20px;
+    justify-content: center;
+}
+.MUSICAS{
+    padding: 25px;
+    background-color: #f0f8ff48;
+    border-radius: 18px;
+    width: 100%;
+}
+.topmusicas{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(299px, 1fr));
+    flex-wrap:wrap ;
+    gap: 10px;
+}
+.musica{
+    width: 100%;
+    min-width: 200px;
+    display: flex;
+    padding: 10px;
+    align-items: center; 
+    gap: 15px; 
+    border-radius: 12px;
+    background-color: #57565627;
+}
+.musica img{
+    border-radius: 8px;
+    width: 4em;
+    height: auto; 
+}
+
+.finneas:hover{
+    background: linear-gradient(to right, #e7d9bb79, rgba(245, 245, 245, 0.267));
+}
+.gracie:hover{
+    background: linear-gradient(to right, #7fc9eb79, rgba(245, 245, 245, 0.267));
+}
+.taylor:hover{
+    background: linear-gradient(to right, #5c5c5c79, rgba(245, 245, 245, 0.267));
+}
+.noah:hover{
+    background: linear-gradient(to right, #495e4b79, rgba(245, 245, 245, 0.267));
+}
+.phoebe:hover{
+    background: linear-gradient(to right, #854e4e79, #40406354, rgba(245, 245, 245, 0.267));
+}
+
+.musica-info h2 a{
+    color: black;
+    text-decoration: none;
+}
+.musica-info h4 a{
+    color: gray; 
+    text-decoration: none;
+}
+
+.musica-info h2 a:hover{
+    color: hsla(0, 0%, 0%, 0.6);
+    font-weight: 760;
+    text-decoration: none;
+}
+.musica-info h4 a:hover{
+    color: rgba(128, 128, 128, 0.6); 
+    font-weight: 760;
+    text-decoration: none;
+}
+
+.topalbuns{
+    padding: 25px;
+    background-color: rgba(240, 248, 255, 0.281);
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.album{
+    width: 100%;
+    min-width: 200px;
+    display: flex;
+    padding: 10px;
+    align-items: center; 
+    gap: 15px; 
+    border-radius: 12px;
+    background-color: #57565627;
+    transition: all 0.4s ease-in-out;
+}
+.album img{
+    border-radius: 50%;
+    width: 5em;
+    height: auto; 
+    transition: transform 0.1ms ease;
+}
+.album:hover img {
+    animation: spin 5s linear infinite; 
+}
+.album_info h2 {
+    margin: 0; 
+    font-size: 1.5rem; 
+}
+
+.album_info h4 {
+    margin: 0; 
+    font-size: 1rem; 
+    color: gray; 
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg); /* Começa na posição original */
+    }
+    to {
+        transform: rotate(360deg); /* Completa uma rotação */
+    }
+}
+
+.generos_musicais{
+    margin: 10px;
+    padding: 20px;
+    gap: 20px;
+    background-color: #f0f8ff48;
+    border-radius: 18px;
+}
+.generos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.generos img{
+    min-width: 400px;
+    max-width: 30vw;
+    height: auto;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media (max-width:956px){
+    .tops{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .generos img{
+        min-width: 300px;
+    }
+    .musica img{
+        width: 50px;
+    }
+    .album img{
+        width: 65px;
+    }
+}
+
+@media (max-width: 480px) {
+    .div_slider h1{
+        font-size: 18px;
+    }
+    .topmusicas{
+        display: flex;
+        flex-direction: column;
+    }
+    .generos img{
+        min-width: 200px;
+    }
+    .album{
+        display: flex;
+        flex-direction: column;
+    }
+    .musica{
+        flex-direction: column;
+    }
+}
