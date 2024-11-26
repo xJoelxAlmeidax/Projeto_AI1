@@ -163,6 +163,7 @@ main{
     border-top-left-radius: 20px;
     background-color: #333;
     transition: all 0.3s ease;
+    z-index: 1000;
 }
 
 .menu-toggle{
@@ -241,7 +242,7 @@ main{
 
 footer{
     padding-left: 30px;
-    min-height: 15vh;
+    min-height: 18vh;
     height:fit-content;
     width: 110%;
     margin: -18px;
@@ -265,7 +266,10 @@ footer a:hover{
 
 }
 .links{
-    gap: 15px;
+    position: absolute;
+    display: flex;
+    width: 95vw;
+    justify-content: space-evenly;
 }
 
 @media (max-width: 900px){
@@ -294,6 +298,8 @@ footer a:hover{
         gap: 20px;
     }
     .links{
+        position: static;
+        gap: 15px;
         display: flex;
         flex-direction: column;
         align-items: center;

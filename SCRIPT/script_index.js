@@ -40,7 +40,7 @@ function nextImage() {
         document.getElementById("Artista").innerHTML = "Artista Destacado: Phoebe Bridgers";
         break;
       case 4:
-        document.getElementById("Artista").innerHTML = "Artista Destacado: Finneas O'Connel";
+        document.getElementById("Artista").innerHTML = "Artista Destacado: Adam Melchor";
         break;
       case 5:
         document.getElementById("Artista").innerHTML = "Artista Destacado: Gracie Abrams";
@@ -65,7 +65,7 @@ function setManualSelection(index) {
       document.getElementById("Artista").innerHTML = "Artista Destacado: Phoebe Bridgers";
       break;
     case 4:
-      document.getElementById("Artista").innerHTML = "Artista Destacado: Finneas O'Connel";
+      document.getElementById("Artista").innerHTML = "Artista Destacado: Adam Melchor";
       break;
     case 5:
       document.getElementById("Artista").innerHTML = "Artista Destacado: Gracie Abrams";

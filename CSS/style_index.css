@@ -171,8 +171,8 @@
     height: auto; 
 }
 
-.finneas:hover{
-    background: linear-gradient(to right, #e7d9bb79, rgba(245, 245, 245, 0.267));
+.adam:hover{
+    background: linear-gradient(to right, #59788679, rgba(245, 245, 245, 0.267));
 }
 .gracie:hover{
     background: linear-gradient(to right, #7fc9eb79, rgba(245, 245, 245, 0.267));
@@ -263,14 +263,12 @@
 }
 .generos{
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    overflow-x: scroll;
     gap: 20px;
 }
 
 .generos img{
-    min-width: 400px;
-    max-width: 30vw;
+    width: 450px;
     height: auto;
     border-radius: 12px;
     transition: all 0.3s ease;
@@ -286,9 +284,6 @@
 }
 
 @media (max-width: 768px) {
-    .generos img{
-        min-width: 300px;
-    }
     .musica img{
         width: 50px;
     }
@@ -305,12 +300,18 @@
         display: flex;
         flex-direction: column;
     }
+    .generos{
+        overflow-x: hidden;
+        overflow-y: scroll;
+        flex-direction: column;
+    }
     .generos img{
-        min-width: 200px;
+        width: 100%;
     }
     .album{
         display: flex;
         flex-direction: column;
+        
     }
     .musica{
         flex-direction: column;

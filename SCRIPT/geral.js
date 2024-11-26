@@ -46,8 +46,9 @@ function abrirSidebar() {
     document.body.style.overflow = "hidden"; 
   }
 
-  function fecharSidebar() {
+function fecharSidebar() {
     document.getElementById("mySidebar").classList.remove("open");
     document.getElementById("overlay").style.display = "none";
     document.body.style.overflow = ""; 
-  }
+}
+
