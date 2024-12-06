@@ -1,0 +1,170 @@
+
+#content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.Top{
+    width: 100%;
+    border-radius: 18px;
+    min-height: 30vh;
+    max-height: 100vh;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    z-index: 2;
+}
+
+.Top img{
+    border-radius: 12px;
+    min-width: 150px;
+    width: 12%;
+    height: auto;
+}
+.Top a img{
+    border-radius: 12px;
+    min-width: 150px;
+    width: 100%;
+    height: auto;
+}
+.Top a{
+    margin: 0;
+    min-width: 150px;
+    width: 12%;
+}
+
+.Titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+.Titulo h2{
+    font-size: 2.488rem;
+    color: white;
+}
+.Titulo a{
+    text-decoration: none;
+    font-size: 1.728rem;
+    color: #d4d4d4;
+}
+.Titulo a:hover{
+    text-decoration: none;
+    font-size: 1.728rem;
+    color: #a3a3a3;
+}
+
+.letra{
+    border-radius: 12px;
+    background-color: #f0f8ff48;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    width: 50%;
+    min-width: fit-content;
+    padding: 20px;
+    flex-wrap:wrap;
+}
+.letra b{
+    font-size: 1.44rem;
+}
+.letra p{
+    font-size: 1.2rem;
+}
+.letra div{
+    text-wrap: nowrap;
+}
+.botão{
+    padding: 10px 15px;
+    background-color: #333;
+    border-radius: 8px;
+}
+a{
+    text-decoration: none;
+    color: #d4d4d4;
+}
+
+.msg_e_click{
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#spotify a, #apple_music a{
+    width: fit-content;
+    border-radius: 8px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+}
+.abrir_em{
+    position: relative;
+    bottom: baseline;
+    display: flex;
+    gap: 30px;
+}
+
+#spotify a{
+    background-color: #1cca5b;
+}
+#spotify a:hover{
+    background-color: #2f4738;
+}
+#apple_music a{
+    background-color: #fa586a;
+}
+#apple_music a:hover{
+    background-color: #501c22;
+}
+#spotify a:hover, #apple_music a:hover{
+    color: #fff;
+}
+
+@media (max-width:956px){
+    .abrir_em{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width:768px){
+    .letra b{
+        font-size: 1.2rem;
+    }
+    .letra p{
+        font-size: 1rem;
+    }
+    .letra div{
+        text-wrap: wrap;
+    }
+    .abrir_em{
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+@media (max-width:450px){
+    .Top img{
+        min-width: 100px;
+    }
+    .abrir_em{
+        gap: 25px;
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    #spotify a, #apple_music a{
+        font-size: medium;
+    }
+}

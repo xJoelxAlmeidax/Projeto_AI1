@@ -1,0 +1,239 @@
+.top{
+    border-radius: 18px;
+    min-height: 50vh;
+    max-height: 100vh;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    z-index: 2;
+}
+*{
+    transition: all 0.3s ease;
+}
+.top img{
+    border-radius: 50%;
+    min-width: 150px;
+    width: 18%;
+    height: auto;
+}
+
+.nome_abrir{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.nome_abrir h1{
+    font-size: 4em;
+    margin-bottom: 10vw;
+    color: #ebebeb;
+}
+#spotify a, #apple_music a{
+    width: fit-content;
+    border-radius: 8px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+}
+.abrir_em{
+    position: relative;
+    bottom: baseline;
+    display: flex;
+    gap: 30px;
+}
+
+#spotify a{
+    background-color: #1cca5b;
+}
+#spotify a:hover{
+    background-color: #2f4738;
+}
+#apple_music a{
+    background-color: #fa586a;
+}
+#apple_music a:hover{
+    background-color: #501c22;
+}
+#spotify a:hover, #apple_music a:hover{
+    color: #fff;
+}
+.info{
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center; 
+    gap: 15px; 
+    border-radius: 12px;
+    padding: 20px;
+    background-color: #f0f8ff48;
+    max-height: 590px;
+    overflow-y: scroll;
+}
+
+.musicas{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px;
+    background-color: #f0f8ff48;
+    border-radius: 18px;
+    width: 100%;
+}
+.musica{
+    min-width: 200px;
+    display: flex;
+    padding: 10px;
+    align-items: center; 
+    gap: 15px; 
+    border-radius: 12px;
+    background-color: #57565627;
+}
+.musica img{
+    border-radius: 8px;
+    width: 4em;
+    height: auto; 
+}
+
+.info_musicas{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
+    padding: 10px;
+    justify-content: center;
+    height: auto;
+}
+.musica-info h2 a{
+    color: black;
+    text-decoration: none;
+}
+.musica-info h4 a{
+    color: gray; 
+    text-decoration: none;
+}
+
+.musica-info h2 a:hover{
+    color: hsla(0, 0%, 0%, 0.6);
+    font-weight: 760;
+    text-decoration: none;
+}
+.musica-info h4 a:hover{
+    color: rgba(128, 128, 128, 0.6); 
+    font-weight: 760;
+    text-decoration: none;
+}
+.albuns{
+    width: 100%;
+    padding: 25px;
+    background-color: rgba(240, 248, 255, 0.281);
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+    overflow-x: scroll;
+}
+.ALBUNS{
+    display: flex;
+    gap: 15px;
+}
+.ALBUNS a{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border-radius: 12px;
+    background-color: #57565627;
+    text-decoration: none;
+    color: #333;
+}
+.album{
+    width: 290px;
+    margin-top: 15px;
+    text-align: center;
+}
+.album img{
+    margin-bottom: 10px;
+    width: 270px;
+    border-radius: 12px;
+}
+.album img:hover{
+    transform:scale(1.05);
+}
+a .album h3{
+    width: 100%; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    position: relative; 
+    cursor: pointer;
+}
+.album h3:hover{
+    white-space: normal;
+    transform: scale(1.05);
+}
+
+
+@media (max-width:956px){
+    .abrir_em{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width:768px){
+    .top{
+        flex-direction: column;
+    }
+    .nome_abrir h1{
+        text-align: center;
+        font-size: 2.5em;
+    }
+    .abrir_em{
+        flex-direction: row;
+        gap: 10px;
+    }
+    .musica img{
+        width: 50px;
+    }
+}
+
+@media (max-width: 540px){
+    .abrir_em{
+        gap: 25px;
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .nome_abrir h1{
+        font-size: 2em;
+    }
+    .top{
+        gap: 8px;
+    }
+    #spotify a, #apple_music a{
+        font-size: medium;
+    }
+    .ALBUNS{
+        flex-direction: column;
+    }
+    .album img{
+        width: 80%;
+    }
+    .albuns{
+        height: 70vh;
+        overflow-y: scroll
+    }
+    .album h3{
+        font-size: small;
+    }
+}
