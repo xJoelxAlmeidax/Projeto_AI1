@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
 }
 h1 {
     font-size: 2.986rem;
@@ -77,9 +78,6 @@ button.incorrect {
     border-radius: 8px;
 }
 
-
-
-/* Estilo do botão de fechar */
 .close-btn {
     margin-top: 20px;
     padding: 10px 20px;
@@ -135,3 +133,114 @@ table {
     padding: 20px 40px;
     max-width: 100%;
   }
+#content div.tabela{            /*Adicionado posteriormente para não alterar devido à pagina de letras enviadas*/
+    width: fit-content;
+}
+  
+
+
+  /*-------------------------------------------LETRAS ENVIADAS----------------------------------------------------------*/
+#content div{
+    width: 100%;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#content li {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.musica-env {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.musica-conteudo{
+    display: flex;
+}
+
+.musica-titulo-album {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 16px;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.musica-artista {
+    margin-top: 5px;
+    color: #3f3f3f;
+    font-size: 14px;
+}
+
+.letra {
+    background-color: #f0f0f0;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 0;
+    max-height: 0; 
+    overflow: scroll;
+    transition: all 0.3s ease;
+}
+
+/* Letra expandida */
+.letra.expanded {
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 1;
+    max-height: 50vh;
+}
+
+strong {
+    font-size: 18px;
+    color: #333;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.musica-botoes{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+.musica-botoes button {
+    width: 40px;
+    padding: 12px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.musica-botoes button.expand-btn {
+    color: #333;
+    background-color: #6d6d6d4b;
+}
+.musica-botoes button.delete-btn {
+    color: #333;
+    background-color: #6d6d6d4b;
+}
+
+.musica-botoes button.expand-btn:hover {
+    color: #333;
+    background-color: #568b777a;
+}
+
+.musica-botoes button.delete-btn:hover {
+    color: #333;
+    background-color: #8b56566c;
+}
