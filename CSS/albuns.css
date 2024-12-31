@@ -36,7 +36,7 @@
     width: 100%;
     gap: 15px;
     min-height: 58vh;
-    background-color: #f0f8ff48;
+    background-color: var(--divs-color);
 }
 #msc_list .musica{
     min-width: 200px;
@@ -45,7 +45,7 @@
     align-items: center; 
     gap: 15px; 
     border-radius: 12px;
-    background-color: #57565627;
+    background-color: var(--interndivs-color);
     justify-content: space-between;
 }
 .spotify{
@@ -79,7 +79,7 @@
     background-color: rgba(82, 82, 82, 0.158);
 }
 .musica h3 a{
-    color: #333;
+    color: var(--text-color);
     font-weight: bolder;
 }
 .musica h3 a:hover{

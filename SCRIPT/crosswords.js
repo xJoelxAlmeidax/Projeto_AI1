@@ -4,7 +4,9 @@ function getURLParameter(param) {
 }
 function loadPage(index){
     const contentDiv = document.getElementById("content");
+    const titulo = document.getElementsByTagName("title")[0];
     if(index===2){
+        titulo.innerHTML= `ALTmsc - Palavras Cruzadas`
         contentDiv.innerHTML= `
             <h2>Palavras Cruzadas</h2>
             <div class="tabela">

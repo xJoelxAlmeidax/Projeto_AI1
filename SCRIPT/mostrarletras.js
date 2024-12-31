@@ -4,7 +4,9 @@ function getURLParameter(param) {
 }
 function loadPage(index){
     const contentDiv = document.getElementById("content");
+    const titulo = document.getElementsByTagName("title")[0];
     if(index==3){
+        titulo.innerHTML= `ALTmsc - Letras Enviadas`
         class MostrarLetras extends React.Component {
             constructor(props) {
                 super(props);
@@ -14,7 +16,7 @@ function loadPage(index){
             }
         
             componentDidMount() {
-                // Recupera as submissões do localStorage quando o componente é montado
+                // Recupera as submissões do localStorage quando o componente é construido
                 const submissions = JSON.parse(localStorage.getItem('submissions')) || [];
                 this.setState({ submissions });
             }

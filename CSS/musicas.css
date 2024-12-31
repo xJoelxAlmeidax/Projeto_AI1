@@ -64,7 +64,7 @@
 
 .letra{
     border-radius: 12px;
-    background-color: #f0f8ff48;
+    background-color: var(--divs-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,8 +77,11 @@
 }
 .letra b{
     font-size: 1.44rem;
+    color: var(--text-color);
+
 }
 .letra p{
+    color: var(--text-color);
     font-size: 1.2rem;
 }
 .letra div{
@@ -86,7 +89,7 @@
 }
 .botão{
     padding: 10px 15px;
-    background-color: #333;
+    background-color: var(--header-color);
     border-radius: 8px;
 }
 a{

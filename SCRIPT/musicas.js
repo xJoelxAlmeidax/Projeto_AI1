@@ -439,9 +439,11 @@ function getURLParameter(param) {
 }
 function loadLyrics(index) {
     const contentDiv = document.getElementById("content");
+    const titulo = document.getElementsByTagName("title")[0];
     if (index >= 0 && index < lyrics.length) {
         const lyric = lyrics[index];
         if(lyric.album!=""){
+            titulo.innerHTML= `ALTmsc - ${lyric.title}`
             contentDiv.innerHTML = `
             <div class="Top" style="background-image: url(${lyric.background})">
                 <a href="${lyric.album}"><img src="${lyric.icon}" alt="${lyric.title}"></a>
@@ -500,7 +502,9 @@ if (lyricId !== null) {
 function loadAlbum(idAlbum) {
     const album = Albums.find(album => album.id_album === idAlbum);
     const contentDiv = document.getElementById("content");
+    const titulo = document.getElementsByTagName("title")[0];
     if (album) {
+        titulo.innerHTML= `ALTmsc - ${album.title}`
         // Exibir informações do álbum
         contentDiv.innerHTML = `
         <div class="album" style="background-image: url(${album.banner});">

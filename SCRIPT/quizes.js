@@ -4,8 +4,10 @@ function getURLParameter(param) {
 }
 function loadPage(index){
     const contentDiv = document.getElementById("content");
+    const titulo = document.getElementsByTagName("title")[0];
     switch(index){
         case 0:
+          titulo.innerHTML=`ALTmsc - Quiz Taylor Swift`
             contentDiv.innerHTML =`
                 <div id="quiz">
                     <h1>QUIZ Taylor Swift</h1>
@@ -106,6 +108,7 @@ function loadPage(index){
             `
             break;
         case 1:
+          titulo.innerHTML=`ALTmsc - Quiz Geral`
             contentDiv.innerHTML =`
                 <div id="quiz">
                     <h1>QUIZ Geral de Música</h1>

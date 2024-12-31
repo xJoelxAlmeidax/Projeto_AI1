@@ -10,7 +10,7 @@
     padding: 10px 15px;
     width: fit-content;
     position:absolute;
-    background-color: #333;
+    background-color: var(--header-color);
     color: #ffffff;
     border-top-left-radius: 18px;
     border-bottom-right-radius: 18px;
@@ -143,9 +143,12 @@
     gap: 20px;
     justify-content: center;
 }
+.tops h1, .sec_extras h1 {
+    color: var(--text-color);
+}
 .MUSICAS{
     padding: 25px;
-    background-color: #f0f8ff48;
+    background-color: var(--divs-color);
     border-radius: 18px;
     width: 100%;
 }
@@ -163,7 +166,7 @@
     align-items: center; 
     gap: 15px; 
     border-radius: 12px;
-    background-color: #57565627;
+    background-color: var(--interndivs-color);
 }
 .musica img{
     border-radius: 8px;
@@ -172,27 +175,27 @@
 }
 
 .adam:hover{
-    background: linear-gradient(to right, #59788679, rgba(245, 245, 245, 0.267));
+    background: linear-gradient(to right, #59788679, var(--divs-color));
 }
 .gracie:hover{
-    background: linear-gradient(to right, #7fc9eb79, rgba(245, 245, 245, 0.267));
+    background: linear-gradient(to right, #7fc9eb79, var(--divs-color));
 }
 .taylor:hover{
-    background: linear-gradient(to right, #5c5c5c79, rgba(245, 245, 245, 0.267));
+    background: linear-gradient(to right, #5c5c5c79, var(--divs-color));
 }
 .noah:hover{
-    background: linear-gradient(to right, #495e4b79, rgba(245, 245, 245, 0.267));
+    background: linear-gradient(to right, #495e4b79, var(--divs-color));
 }
 .phoebe:hover{
-    background: linear-gradient(to right, #854e4e79, #40406354, rgba(245, 245, 245, 0.267));
+    background: linear-gradient(to right, #854e4e79, hsla(240, 21%, 32%, 0.329), var(--divs-color));
 }
 
 .musica-info h2 a{
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
 }
 .musica-info h4 a{
-    color: gray; 
+    color: var(--text-color); 
     text-decoration: none;
 }
 
@@ -209,7 +212,7 @@
 
 .topalbuns{
     padding: 25px;
-    background-color: rgba(240, 248, 255, 0.281);
+    background-color: var(--divs-color);
     border-radius: 18px;
     display: flex;
     flex-direction: column;
@@ -223,7 +226,7 @@
     align-items: center; 
     gap: 15px; 
     border-radius: 12px;
-    background-color: #57565627;
+    background-color: var(--interndivs-color);
     transition: all 0.4s ease-in-out;
 }
 .album img{
@@ -238,12 +241,13 @@
 .album_info h2 {
     margin: 0; 
     font-size: 1.5rem; 
+    color: var(--text-color);
 }
 
 .album_info h4 {
     margin: 0; 
     font-size: 1rem; 
-    color: gray; 
+    color: var(--text-color); 
 }
 @keyframes spin {
     from {
@@ -258,7 +262,7 @@
     margin: 10px;
     padding: 20px;
     gap: 20px;
-    background-color: #f0f8ff48;
+    background-color: var(--divs-color);
     border-radius: 18px;
 }
 .extras{

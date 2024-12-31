@@ -6,7 +6,7 @@
 }
 h1 {
     font-size: 2.986rem;
-    color: #333;
+    color: var(--text-color);
     margin-bottom: 20px;
 }
 p{
@@ -25,7 +25,8 @@ p{
     max-width: 600px;
     padding: 20px;
     border-radius: 8px;
-    background-color: #ffffff79;
+    color: var(--text-color);
+    background-color: var(--divs-color);
     box-shadow: 0px 4px 8px #0000001a;
 }
 
@@ -37,12 +38,13 @@ main button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #ffffffd8;
+    color: var(--text-color);
+    background-color: var(--button-color);
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #f0f8ff48;  
+    background-color: var(--divs-color);  
 }
 
 button.correct {
@@ -76,6 +78,7 @@ button.incorrect {
     width: fit-content;
     background-color: #28493227;
     border-radius: 8px;
+    color: var(--text-color);
 }
 
 .close-btn {
@@ -94,6 +97,9 @@ button.incorrect {
     background-color: #55555588;
 }
 
+h2{
+    color: var(--text-color);
+}
 table {
     text-align: center;
     border-radius: 4px;
@@ -111,7 +117,7 @@ table {
   }
   
   .dark {
-    background:#333;
+    background:var(--header-color);
     
   }
   .grey {
@@ -128,10 +134,11 @@ table {
   }
   .clues{
     margin: 10px;
-    background-color: #ffffff79;
+    background-color:var(--divs-color);
     border-radius: 12px;
     padding: 20px 40px;
     max-width: 100%;
+    color: var(--text-color);
   }
 #content div.tabela{            /*Adicionado posteriormente para não alterar devido à pagina de letras enviadas*/
     width: fit-content;
@@ -151,7 +158,7 @@ ul {
 #content li {
     margin-bottom: 20px;
     padding: 15px;
-    background-color: #f9f9f9;
+    background-color: var(--button-color);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -161,7 +168,7 @@ ul {
     flex-direction: column;
     margin-bottom: 20px;
     padding: 15px;
-    background-color: #f9f9f9;
+    background-color: var(--divs-color);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -181,12 +188,12 @@ ul {
 
 .musica-artista {
     margin-top: 5px;
-    color: #3f3f3f;
+    color: var(--text-color);
     font-size: 14px;
 }
 
 .letra {
-    background-color: #f0f0f0;
+    background-color: var(--divs-color);
     overflow-x: auto;
     font-family: 'Courier New', Courier, monospace;
     opacity: 0;
@@ -205,17 +212,23 @@ ul {
 
 strong {
     font-size: 18px;
-    color: #333;
+    color: var(--text-color);
 }
 
 p {
     margin: 5px 0;
+}
+span{
+    color: var(--text-color);
 }
 
 .musica-botoes{
     display: flex;
     gap: 10px;
     justify-content: flex-end;
+}
+pre{
+    color: var(--text-color);
 }
 .musica-botoes button {
     width: 40px;
@@ -227,20 +240,20 @@ p {
 }
 
 .musica-botoes button.expand-btn {
-    color: #333;
+    color: var(--text-color);
     background-color: #6d6d6d4b;
 }
 .musica-botoes button.delete-btn {
-    color: #333;
+    color: var(--text-color);
     background-color: #6d6d6d4b;
 }
 
 .musica-botoes button.expand-btn:hover {
-    color: #333;
+    color: var(--text-color);
     background-color: #568b777a;
 }
 
 .musica-botoes button.delete-btn:hover {
-    color: #333;
+    color: var(--text-color);
     background-color: #8b56566c;
 }
